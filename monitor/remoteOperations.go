@@ -21,8 +21,8 @@ import (
 	"strconv"
 
 	mapset "github.com/deckarep/golang-set"
-	"github.com/mihirsoni/odfe-monitor-cli/destination"
-	"github.com/mihirsoni/odfe-monitor-cli/es"
+	"github.com/roshanp/odfe-monitor-cli/destination"
+	"github.com/roshanp/odfe-monitor-cli/es"
 	"github.com/pkg/errors"
 )
 
@@ -124,11 +124,11 @@ func (monitor *Monitor) Prepare(
 			currentAction := monitor.Triggers[index].Actions[k]
 			currentAction.ID = ""
 			remoteDestinationID := "-4z7_HYBk7L4XNQ-1TNu"
-			if remoteDestinationID == "" {
-				return errors.New("Specified destination " + currentAction.DestinationID +
-					" in monitor " + monitor.Name +
-					" doesn't exist in destinations list, sync destinations using sync --destination")
-			}
+			// if remoteDestinationID == "" {
+			// 	return errors.New("Specified destination " + currentAction.DestinationID +
+			// 		" in monitor " + monitor.Name +
+			// 		" doesn't exist in destinations list, sync destinations using sync --destination")
+			// }
 			currentAction.DestinationID = remoteDestinationID
 			// Converting subject to adhere to API
 			currentAction.SubjectTemplate = Script{
