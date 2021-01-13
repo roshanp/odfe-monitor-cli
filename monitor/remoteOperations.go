@@ -123,7 +123,7 @@ func (monitor *Monitor) Prepare(
 		for k := range monitor.Triggers[index].Actions {
 			currentAction := monitor.Triggers[index].Actions[k]
 			currentAction.ID = ""
-			remoteDestinationID := destinationsMap[currentAction.DestinationID].ID
+			remoteDestinationID := "-4z7_HYBk7L4XNQ-1TNu"
 			if remoteDestinationID == "" {
 				return errors.New("Specified destination " + currentAction.DestinationID +
 					" in monitor " + monitor.Name +
