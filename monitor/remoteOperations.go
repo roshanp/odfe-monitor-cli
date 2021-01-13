@@ -40,7 +40,7 @@ func GetAllRemote(esClient es.Client, destinationsMap map[string]destination.Des
 	allRemoteMonitorsMap := make(map[string]Monitor)
 	remoteMonitorsSet := mapset.NewSet()
 	// Reversed map for destinations
-	flippedDestinations := mapIDAsKey(destinationsMap)
+	//flippedDestinations := mapIDAsKey(destinationsMap)
 	if resp.Status == 404 {
 		// No monitors exists so no index exists, returning empty and will create new monitors
 		return allRemoteMonitorsMap, remoteMonitorsSet, nil
