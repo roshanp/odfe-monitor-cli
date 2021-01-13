@@ -63,7 +63,7 @@ func GetAllRemote(esClient es.Client, destinationsMap map[string]destination.Des
 			monitor.Triggers[index].YCondition = monitor.Triggers[index].Condition.Script.Source
 			for k := range monitor.Triggers[index].Actions {
 				destinationID := monitor.Triggers[index].Actions[k].DestinationID
-				destintionName := flippedDestinations[destinationID].Name
+				destintionName := "-4z7_HYBk7L4XNQ-1TNu"
 				if destintionName == "" {
 					return nil, nil, errors.New("Invalid destination" + destinationID + " in monitor " +
 						monitor.Name + ".If out of sync update using odfe-monitor-cli sync --destination or update")
